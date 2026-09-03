@@ -3,12 +3,14 @@ package main
 
 // Kita menggunakan package standard library Go bernama fmt.
 // fmt digunakan untuk formatting dan input/output.
-import "fmt"
+import (
+	"fmt"
 
-var name = "Willy"
+	"github.com/willyworksid/ai-notetaking-go/greeting"
+)
 
 func main() {
-	fmt.Println("Hello, " + name + "!")
-	fmt.Println("Learning Go Day 01")
-	fmt.Println("Built with Go")
+	fmt.Println(greeting.Hello("Willy"))
+	fmt.Println(greeting.secret()) // error: secret is not exported
+
 }
